@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: antiquewhite;
+}
+.triangle {
+    width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 300px solid green;      
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.triangle::after, .triangle::before {
+    content: "";
+    width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 300px solid green;
+}
+.triangle::after {
+    position: absolute;
+    top:100px;
+    left: -100px;
+}
+.triangle::before {
+    position: absolute;
+    top: -160px;
+    left: -100px;
+}
+.stick {
+    width: 50px;
+    height: 90px;
+    background-color: rgb(40, 0, 0);
+    position: absolute;
+    top: 620px;
+    left: 750px;
+    z-index: -1;
+} 
+.ball-one {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: palevioletred;
+    position: absolute;
+    top: 130px;
+    left: 750px;
+}
+.ball-two {
+    width: 60px;
+    height:20px;
+    background-color: purple;
+    transform: skew(10deg);
+    position: absolute;
+    top: 500px;
+    left: 760px;
+}
+.squer {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right,yellow,indigo,violet);
+    position: absolute;
+    top: 550px;
+    left: 700px;
+}
+.squer::after {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -170px;
+    left: 29px;
+    content: "";
+    background-color: rebeccapurple; 
+}
+.ball-three {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 100%;
+    left: 750px;
+    top: 41px;
+}
+.ball-three::after {
+    background-color: cadetblue;
+    width: 50px;
+    height: 60px;
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    top: 260px;
+}
+.ball-three::before {
+    background-color: yellowgreen;
+    width: 50px;
+    height: 60px;
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    top: 170px;
+}
